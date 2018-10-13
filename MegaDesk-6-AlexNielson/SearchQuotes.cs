@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MegaDesk_6_AlexNielson
+namespace MegaDesk_4_AlexNielson
 {
     public partial class SearchQuotes : Form
     {

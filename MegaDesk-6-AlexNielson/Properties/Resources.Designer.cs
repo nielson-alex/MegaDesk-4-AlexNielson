@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MegaDesk_6_AlexNielson.Properties
+namespace MegaDesk_4_AlexNielson.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace MegaDesk_6_AlexNielson.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MegaDesk_6_AlexNielson.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MegaDesk_4_AlexNielson.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

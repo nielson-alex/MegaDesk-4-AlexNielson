@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_6_AlexNielson
+﻿namespace MegaDesk_4_AlexNielson
 {
     partial class SearchQuotes
     {
