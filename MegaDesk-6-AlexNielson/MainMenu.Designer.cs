@@ -91,7 +91,7 @@
             this.Controls.Add(this.btnViewQuotes);
             this.Controls.Add(this.btnAddQuote);
             this.Name = "MainMenu";
-            this.Text = "Form1";
+            this.Text = "Main Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 

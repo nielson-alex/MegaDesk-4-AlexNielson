@@ -41,15 +41,17 @@
             this.pnlQuotes.Controls.Add(this.lbQuotes);
             this.pnlQuotes.Location = new System.Drawing.Point(17, 70);
             this.pnlQuotes.Name = "pnlQuotes";
-            this.pnlQuotes.Size = new System.Drawing.Size(1165, 336);
+            this.pnlQuotes.Size = new System.Drawing.Size(1421, 336);
             this.pnlQuotes.TabIndex = 72;
             // 
             // lbQuotes
             // 
+            this.lbQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuotes.FormattingEnabled = true;
+            this.lbQuotes.ItemHeight = 20;
             this.lbQuotes.Location = new System.Drawing.Point(3, 4);
             this.lbQuotes.Name = "lbQuotes";
-            this.lbQuotes.Size = new System.Drawing.Size(1158, 329);
+            this.lbQuotes.Size = new System.Drawing.Size(1415, 324);
             this.lbQuotes.TabIndex = 0;
             // 
             // btnSearch
@@ -89,13 +91,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1194, 418);
+            this.ClientSize = new System.Drawing.Size(1450, 418);
             this.Controls.Add(this.pnlQuotes);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.ddlMaterials);
             this.Controls.Add(this.btnCancel);
             this.Name = "SearchQuotes";
-            this.Text = "SearchQuotes";
+            this.Text = "Search for Quotes";
             this.pnlQuotes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

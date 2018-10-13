@@ -70,11 +70,11 @@
             this.lblLastNameError.AutoSize = true;
             this.lblLastNameError.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblLastNameError.Location = new System.Drawing.Point(256, 132);
+            this.lblLastNameError.Location = new System.Drawing.Point(260, 132);
             this.lblLastNameError.Name = "lblLastNameError";
-            this.lblLastNameError.Size = new System.Drawing.Size(202, 29);
+            this.lblLastNameError.Size = new System.Drawing.Size(247, 29);
             this.lblLastNameError.TabIndex = 52;
-            this.lblLastNameError.Text = "lblLastNameError";
+            this.lblLastNameError.Text = "Textbox cannot empty";
             // 
             // label9
             // 
@@ -82,28 +82,29 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(14, 97);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(238, 29);
+            this.label9.Size = new System.Drawing.Size(250, 29);
             this.label9.TabIndex = 51;
-            this.label9.Text = "Customer Last Name";
+            this.label9.Text = "Customer Last Name: ";
             // 
             // lblFirstNameError
             // 
             this.lblFirstNameError.AutoSize = true;
             this.lblFirstNameError.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstNameError.ForeColor = System.Drawing.Color.Red;
-            this.lblFirstNameError.Location = new System.Drawing.Point(256, 49);
+            this.lblFirstNameError.Location = new System.Drawing.Point(264, 49);
             this.lblFirstNameError.Name = "lblFirstNameError";
-            this.lblFirstNameError.Size = new System.Drawing.Size(205, 29);
+            this.lblFirstNameError.Size = new System.Drawing.Size(247, 29);
             this.lblFirstNameError.TabIndex = 50;
-            this.lblFirstNameError.Text = "lblFirstNameError";
+            this.lblFirstNameError.Text = "Textbox cannot empty";
             // 
             // tbFirstName
             // 
             this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFirstName.Location = new System.Drawing.Point(261, 11);
+            this.tbFirstName.Location = new System.Drawing.Point(266, 11);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(352, 35);
             this.tbFirstName.TabIndex = 32;
+            this.tbFirstName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CheckIfChar);
             // 
             // label7
             // 
@@ -111,15 +112,15 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(14, 14);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(241, 29);
+            this.label7.Size = new System.Drawing.Size(253, 29);
             this.label7.TabIndex = 49;
-            this.label7.Text = "Customer First Name";
+            this.label7.Text = "Customer First Name: ";
             // 
             // ddlSurfaceMaterials
             // 
             this.ddlSurfaceMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ddlSurfaceMaterials.FormattingEnabled = true;
-            this.ddlSurfaceMaterials.Location = new System.Drawing.Point(261, 334);
+            this.ddlSurfaceMaterials.Location = new System.Drawing.Point(266, 334);
             this.ddlSurfaceMaterials.Name = "ddlSurfaceMaterials";
             this.ddlSurfaceMaterials.Size = new System.Drawing.Size(352, 37);
             this.ddlSurfaceMaterials.TabIndex = 38;
@@ -223,13 +224,15 @@
             // tbLastName
             // 
             this.tbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLastName.Location = new System.Drawing.Point(261, 94);
+            this.tbLastName.Location = new System.Drawing.Point(265, 94);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(352, 35);
             this.tbLastName.TabIndex = 33;
+            this.tbLastName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CheckIfChar);
             // 
             // pnlNoOfDrawers
             // 
+            this.pnlNoOfDrawers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlNoOfDrawers.Controls.Add(this.rbDrawers7);
             this.pnlNoOfDrawers.Controls.Add(this.rbDrawers6);
             this.pnlNoOfDrawers.Controls.Add(this.rbDrawers5);
@@ -247,7 +250,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 443);
+            this.label5.Location = new System.Drawing.Point(14, 443);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(173, 29);
             this.label5.TabIndex = 47;
@@ -255,6 +258,7 @@
             // 
             // pnlRushOrderOptions
             // 
+            this.pnlRushOrderOptions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlRushOrderOptions.Controls.Add(this.rb7);
             this.pnlRushOrderOptions.Controls.Add(this.rb5);
             this.pnlRushOrderOptions.Controls.Add(this.rb3);
@@ -316,7 +320,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(217, 443);
+            this.label4.Location = new System.Drawing.Point(211, 443);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(196, 29);
             this.label4.TabIndex = 43;
@@ -328,16 +332,16 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(14, 337);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 29);
+            this.label3.Size = new System.Drawing.Size(199, 29);
             this.label3.TabIndex = 42;
-            this.label3.Text = "Surface Material";
+            this.label3.Text = "Surface Material: ";
             // 
             // lblSubmitError
             // 
             this.lblSubmitError.AutoSize = true;
             this.lblSubmitError.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubmitError.ForeColor = System.Drawing.Color.Red;
-            this.lblSubmitError.Location = new System.Drawing.Point(256, 387);
+            this.lblSubmitError.Location = new System.Drawing.Point(55, 402);
             this.lblSubmitError.Name = "lblSubmitError";
             this.lblSubmitError.Size = new System.Drawing.Size(168, 29);
             this.lblSubmitError.TabIndex = 41;
@@ -348,7 +352,7 @@
             this.lblDepthError.AutoSize = true;
             this.lblDepthError.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepthError.ForeColor = System.Drawing.Color.Red;
-            this.lblDepthError.Location = new System.Drawing.Point(256, 295);
+            this.lblDepthError.Location = new System.Drawing.Point(261, 295);
             this.lblDepthError.Name = "lblDepthError";
             this.lblDepthError.Size = new System.Drawing.Size(157, 29);
             this.lblDepthError.TabIndex = 40;
@@ -359,7 +363,7 @@
             this.lblWidthError.AutoSize = true;
             this.lblWidthError.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWidthError.ForeColor = System.Drawing.Color.Red;
-            this.lblWidthError.Location = new System.Drawing.Point(256, 209);
+            this.lblWidthError.Location = new System.Drawing.Point(261, 209);
             this.lblWidthError.Name = "lblWidthError";
             this.lblWidthError.Size = new System.Drawing.Size(154, 29);
             this.lblWidthError.TabIndex = 39;
@@ -369,7 +373,7 @@
             // 
             this.btnSubmit.AutoSize = true;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(423, 467);
+            this.btnSubmit.Location = new System.Drawing.Point(424, 478);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(194, 62);
             this.btnSubmit.TabIndex = 44;
@@ -380,7 +384,7 @@
             // tbDepth
             // 
             this.tbDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDepth.Location = new System.Drawing.Point(261, 257);
+            this.tbDepth.Location = new System.Drawing.Point(266, 257);
             this.tbDepth.Name = "tbDepth";
             this.tbDepth.Size = new System.Drawing.Size(352, 35);
             this.tbDepth.TabIndex = 37;
@@ -389,7 +393,7 @@
             // tbWidth
             // 
             this.tbWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbWidth.Location = new System.Drawing.Point(261, 171);
+            this.tbWidth.Location = new System.Drawing.Point(266, 171);
             this.tbWidth.Name = "tbWidth";
             this.tbWidth.Size = new System.Drawing.Size(352, 35);
             this.tbWidth.TabIndex = 36;
@@ -419,7 +423,7 @@
             // 
             this.btnCancel.AutoSize = true;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(423, 535);
+            this.btnCancel.Location = new System.Drawing.Point(424, 546);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(194, 62);
             this.btnCancel.TabIndex = 45;
@@ -431,7 +435,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 608);
+            this.ClientSize = new System.Drawing.Size(630, 616);
             this.Controls.Add(this.lblLastNameError);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblFirstNameError);
@@ -454,7 +458,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Name = "AddQuote";
-            this.Text = "AddQuote";
+            this.Text = "Get New Quote";
             this.pnlNoOfDrawers.ResumeLayout(false);
             this.pnlNoOfDrawers.PerformLayout();
             this.pnlRushOrderOptions.ResumeLayout(false);

@@ -28,7 +28,7 @@ namespace MegaDesk_6_AlexNielson
         {
             foreach (Control c in this.Controls)
             {
-                if (c is Label && c.Name.Contains("Error"))
+                if (c is Label && c.Name.Contains("Error")/* && (c.Name != "lblFirstNameError" && c.Name != "lblLastNameError")*/)
                 {
                     Label lbl = (Label)c;
                     lbl.Text = string.Empty;
@@ -56,7 +56,81 @@ namespace MegaDesk_6_AlexNielson
         // Check to see if the value just intered is an integer
         private void CheckIfChar(object sender, KeyEventArgs e)
         {
+            int minValue = 0;
+            int maxValue = 0;
+            TextBox tb = (TextBox)sender;
+            Label errorLabel = findCorrectLabel(tb.Name.Replace("tb", ""));
 
+            switch (tb.Name)
+            {
+                case "tbFirstName":
+                    checkIfEmpty(tb, errorLabel);
+                    break;
+                case "tbLastName":
+                    checkIfEmpty(tb, errorLabel);
+                    break;
+                case "tbWidth":
+                    minValue = Desk.MIN_WIDTH;
+                    maxValue = Desk.MAX_WIDTH;
+                    deleteNonInts(tb, errorLabel, minValue, maxValue);
+                    break;
+                case "tbDepth":
+                    minValue = Desk.MIN_DEPTH;
+                    maxValue = Desk.MAX_DEPTH;
+                    deleteNonInts(tb, errorLabel, minValue, maxValue);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // If the textbox is empty display an error message
+        public void checkIfEmpty(TextBox tb, Label errorLabel)
+        {
+            if (tb.Text.Length < 1)
+            {
+                errorLabel.Text = "This field is required.";
+            }
+            else
+            {
+                errorLabel.Text = string.Empty;
+            }
+        }
+
+        // Delete character values that are not valid integers from the textbox
+        public void deleteNonInts(TextBox tb, Label errorLabel, int minValue, int maxValue)
+        {
+            // Requirement 1
+            try
+            {
+                Convert.ToInt32(tb.Text);
+                if (errorLabel.Text != string.Empty)
+                {
+                    errorLabel.Text = string.Empty;
+                }
+
+                // Display error messages if they attempt to enter values less than the minimum or greater than the maximum
+                if (Convert.ToInt32(tb.Text) < minValue)
+                {
+                    errorLabel.Text = "Value cannot be less than " + minValue.ToString();
+                }
+                else if (Convert.ToInt32(tb.Text) > maxValue)
+                {
+                    errorLabel.Text = "Value cannot be greater than " + maxValue.ToString();
+                }
+            }
+            catch
+            {
+                errorLabel.Text = "This field is required.";
+                if (tb.Text.Length >= 1)
+                {
+                    tb.Text = tb.Text.Remove(tb.Text.Length - 1, 1);
+                }
+                else
+                {
+                    tb.Text = string.Empty;
+                }
+            }
         }
 
         // Get the correct error label for the corresponding textbox
@@ -155,7 +229,7 @@ namespace MegaDesk_6_AlexNielson
             }
             else
             {
-                lblSubmitError.Text = "There was an error configuring your quote";
+                lblSubmitError.Text = "Could not calculate quote. Please fill in all fields.";
             }
         }
 
